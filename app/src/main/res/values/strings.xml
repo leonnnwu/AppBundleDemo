@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AppBundleDemo</string>
     <string name="hello">Hello world!</string>
+    <string name="title_dynamicfeature1">Dynamic module 1</string>
 </resources>
