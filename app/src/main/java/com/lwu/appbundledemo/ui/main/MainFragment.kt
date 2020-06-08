@@ -1,5 +1,6 @@
 package com.lwu.appbundledemo.ui.main
 
+import android.content.Intent
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -27,6 +28,24 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        databinding.button0.setOnClickListener {
+            activity?.let {
+                Intent().setClassName(it.packageName, "com.lwu.dynamicfeature1.DynamicModuleOneActivity")
+                    .also {
+                        startActivity(it)
+                    }
+            }
+        }
+
+        databinding.button1.setOnClickListener {
+            activity?.let {
+                Intent().setClassName(it.packageName, "com.lwu.dynamicfeature2.OnDemandActivity")
+                    .also {
+                        startActivity(it)
+                    }
+            }
+        }
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

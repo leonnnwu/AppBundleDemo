@@ -1,3 +1,4 @@
+include ':dynamicfeature2'
 include ':dynamicfeature1'
 include ':app'
 rootProject.name = "AppBundleDemo"
